@@ -42,7 +42,7 @@ const Welcome = () => {
       />
       <SpotifyLogginButton
         onClick={() => {
-          signIn(null, { redirect: "/" });
+          signIn(null, { redirect: `${window.location.origin}/main` });
         }}
       >
         <img

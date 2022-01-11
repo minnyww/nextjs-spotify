@@ -19,6 +19,9 @@ const params = {
   scope: scopes,
 };
 
+// prod uri --> https://nextjs-spotify-6e4c9qcwn-minnyww.vercel.app/api/auth/callback/spotify
+// dev uri ---> http://localhost:3000/api/auth/callback/spotify
+
 const queryParamString = new URLSearchParams(params);
 console.log("process.env  :", process.env);
 
@@ -42,7 +45,9 @@ export default NextAuth({
       session.user = user;
       return session;
     },
-    redirect({ baseUrl }) {
+    redirect({ url, baseUrl }) {
+      console.log("url : ", url);
+      console.log("baseUrl : ", baseUrl);
       return baseUrl;
     },
   },
