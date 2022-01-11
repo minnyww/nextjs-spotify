@@ -20,6 +20,7 @@ const params = {
 };
 
 const queryParamString = new URLSearchParams(params);
+console.log("process.env  :", process.env);
 
 export default NextAuth({
   providers: [
