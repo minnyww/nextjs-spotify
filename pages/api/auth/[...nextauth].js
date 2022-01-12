@@ -23,7 +23,6 @@ const params = {
 // dev uri ---> http://localhost:3000/api/auth/callback/spotify
 
 const queryParamString = new URLSearchParams(params);
-console.log("process.env  :", process.env);
 
 export default NextAuth({
   providers: [
