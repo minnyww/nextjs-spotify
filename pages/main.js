@@ -83,6 +83,21 @@ const TrackCard = ({ trackName, cover, artist, onClick = () => {} }) => {
   );
 };
 
+// const share = async () => {
+//   const shareData = {
+//     title: "หาเตียง",
+//     text: "ข้อมูลสำหรับผู้ป่วยต้องการเตียง",
+//     url: "https://findbed-covid.vercel.app/",
+//   };
+//   if (navigator.share) {
+//     await navigator.share(shareData);
+//   } else {
+//     message.info({
+//       content: "บราวเซอร์ไม่รองรับ copy ลิงก์แทนก่อนน้า",
+//     });
+//   }
+// };
+
 const NowPlaying = ({ cover, trackName, progress = 0 }) => {
   return (
     <NowPlayingContainer>
@@ -137,13 +152,7 @@ const Home = () => {
           trackName={nowPlaying?.title}
           progress={playingProgress}
         />
-        {/* {trackList?.length <= 0 && (
-          <img
-            width={100}
-            alt="empty"
-            src="https://ouch-cdn2.icons8.com/UsXu_IWSMNVU_JgSlsh1vD4E9yiwQLldqkzve8W1vag/rs:fit:1308:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMTIw/LzQzYmQ4NzY5LTgz/ZmUtNGJjZC04YTgz/LWEyZjU1M2Q5YjE3/MC5zdmc.png"
-          />
-        )} */}
+
         {trackList?.map((track) => {
           return (
             <TrackCard
